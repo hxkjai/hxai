@@ -1,3 +1,3 @@
 @echo off  
-start hhttps://fish.audio/zh-CN/
+start https://fish.audio/zh-CN/
 exit
