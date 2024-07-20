@@ -75,7 +75,7 @@ DEFAULT_DATA = {
     'HatParserSliderInfoText': '帽子蒙版数量:\n调整蒙版的大小。',
 
     #直播分辨率
-    'CameraResolutionTextSelModes': ['3840x2160','2560x1400','1920x1080', '1280x720', '720x480', '640x480', '320x240'],
+    'CameraResolutionTextSelModes': ['3840x2160','2560x1400','1920x1080', '1280x720', '720x480', '640x480', '320x240', "1080x1920", '720x1280', '480x720'],
     'CameraResolutionTextSelMode': '1920x1080',  # 添加默认摄像头分辨率
     'CameraResolutionTextSelInfoText': '启用后，可以选择自定义的摄像头分辨率。',
     'CameraEnabledState': False,  # 添加 CameraEnabledState 键
@@ -409,7 +409,7 @@ DEFAULT_DATA = {
     # 文本选择
     'DetectTypeTextSelInfoText': '面部检测模型:\n选择面部检测模型。大多数情况下只有细微的差别，但在面部处于极端角度或被遮挡时，可能会出现显着差异。',
     'DetectTypeTextSelMode': 'Retinaface',
-    'DetectTypeTextSelModes': ['Retinaface', 'Yolov8', 'SCRDF'],
+    'DetectTypeTextSelModes': ['Retinaface', 'Yolov8', 'SCRDF', 'Yolov10n'],
     'PreviewModeTextSelInfoText': '',
     'PreviewModeTextSelMode': 'Video',
     'PreviewModeTextSelModes': ['Video', 'Image','Theater'],

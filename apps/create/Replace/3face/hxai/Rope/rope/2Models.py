@@ -17,7 +17,7 @@ class Models():
     def __init__(self): 
         self.arcface_dst = np.array( [[38.2946, 51.6963], [73.5318, 51.5014], [56.0252, 71.7366], [41.5493, 92.3655], [70.7299, 92.2041]], dtype=np.float32) 
         self.providers = ['CUDAExecutionProvider', 'CPUExecutionProvider']
-        
+
         self.retinaface_model = []
         self.yoloface_model = []
         self.scrdf_model = []
@@ -71,7 +71,7 @@ class Models():
 
         elif detect_mode=='SCRDF':
             if not self.scrdf_model:
-                self.scrdf_model = onnxruntime.InferenceSession('../models/models1/yoloface_8n.onnx', providers=self.providers)
+                self.scrdf_model = onnxruntime.InferenceSession('../models/models1/scrfd_2.5g_bnkps.onnx', providers=self.providers)
 
             kpss = self.detect_scrdf(img, max_num=max_num, score=score)
 
@@ -602,7 +602,8 @@ class Models():
         det_img = torch.unsqueeze(det_img, 0).contiguous()
 
         io_binding = self.retinaface_model.io_binding()
-        io_binding.bind_input(name='input.1', device_type='cuda', device_id=0, element_type=np.float32, shape=det_img.size(), buffer_ptr=det_img.data_ptr())
+        io_binding.bind_input(name='input.1', device_type='cuda', device_id=0, element_type=np.float32,
+                              shape=det_img.size(), buffer_ptr=det_img.data_ptr())
 
         io_binding.bind_output('448', 'cuda')
         io_binding.bind_output('471', 'cuda')
@@ -687,8 +688,6 @@ class Models():
         pre_det = np.hstack((bboxes, scores)).astype(np.float32, copy=False)
         pre_det = pre_det[order, :]
 
-
-
         dets = pre_det
         thresh = 0.4
         x1 = dets[:, 0]
@@ -711,7 +710,6 @@ class Models():
 
             people[person_id] = orderb[0]
 
-
             # Find overlap of remaining boxes
             xx1 = np.maximum(x1[i], x1[orderb[1:]])
             yy1 = np.maximum(y1[i], y1[orderb[1:]])
@@ -723,26 +721,19 @@ class Models():
 
             inter = w * h
 
-
             ovr = inter / (areas[i] + areas[orderb[1:]] - inter)
 
-
             inds0 = np.where(ovr > thresh)[0]
-            people[person_id] = np.hstack((people[person_id], orderb[inds0+1])).astype(np.int, copy=False)
-
+            people[person_id] = np.hstack((people[person_id], orderb[inds0 + 1])).astype(np.int, copy=False)
 
             # identify where there is no overlap (<thresh)
             inds = np.where(ovr <= thresh)[0]
             # print(len(inds))
 
-
-            orderb = orderb[inds+1]
+            orderb = orderb[inds + 1]
             person_id += 1
 
-
-
         det = pre_det[keep, :]
-
 
         kpss = kpss[order, :, :]
         # print('order', kpss)
@@ -755,8 +746,6 @@ class Models():
             # print('mean', np.mean(kpss[people[person], :, :], axis=0))
             # print(kpss[people[person], :, :].shape)
             kpss_ave.append(np.mean(kpss[people[person], :, :], axis=0).tolist())
-
-
 
         if max_num > 0 and det.shape[0] > max_num:
             area = (det[:, 2] - det[:, 0]) * (det[:, 3] - det[:, 1])
@@ -777,6 +766,9 @@ class Models():
         # return kpss_ave
 
         return kpss_ave
+
+
+
     def detect_scrdf(self, img, max_num, score):
         # Resize image to fit within the input_size
         input_size = (640, 640)
@@ -1006,7 +998,7 @@ class Models():
 
         return np.array(result)
 
-    def detect_yoloface2(self, image_in, max_num, score):
+    def detect_yolo00face2(self, image_in, max_num, score):
         predd = []  # 在函数开头定义 predd 变量
 
         img = image_in.detach().clone()
@@ -1149,6 +1141,197 @@ class Models():
         else:  # 没有检测到人脸
            # print("没有检测到人脸，暂停处理")
             return np.array([])  # 返回空的 numpy 数组
+
+    def detect_yoloface2(self, image_in, max_num, score):
+        img = image_in.detach().clone()
+
+        height = img.size(dim=1)
+        width = img.size(dim=2)
+        length = max((height, width))
+
+        image = torch.zeros((length, length, 3), dtype=torch.uint8,
+                            device='cuda')
+        img = img.permute(1, 2, 0)
+
+        image[0:height, 0:width] = img
+        scale = length / 640.0
+        image = torch.div(image, 255.0)
+
+        t640 = v2.Resize((640, 640), antialias=False)
+        image = image.permute(2, 0, 1)
+        image = t640(image)
+
+        image = torch.unsqueeze(image, 0).contiguous()
+
+        io_binding = self.yoloface_model.io_binding()
+        io_binding.bind_input(name='images', device_type='cuda', device_id=0,
+                              element_type=np.float32, shape=image.size(),
+                              buffer_ptr=image.data_ptr())
+        io_binding.bind_output('output0', 'cuda')
+
+        # Sync and run model
+        self.syncvec.cpu()
+        self.yoloface_model.run_with_iobinding(io_binding)
+
+        net_outs = io_binding.copy_outputs_to_cpu()
+
+        outputs = np.squeeze(net_outs).T
+
+        bbox_raw, score_raw, kps_raw = np.split(outputs, [4, 5], axis=1)
+
+        bbox_list = []
+        score_list = []
+        kps_list = []
+        keep_indices = np.where(score_raw > score)[0]
+
+        if keep_indices.any():
+            bbox_raw, kps_raw, score_raw = bbox_raw[keep_indices], kps_raw[
+                keep_indices], score_raw[keep_indices]
+            for bbox in bbox_raw:
+                bbox_list.append(np.array(
+                    [(bbox[0] - bbox[2] / 2), (bbox[1] - bbox[3] / 2),
+                     (bbox[0] + bbox[2] / 2), (bbox[1] + bbox[3] / 2)]))
+            kps_raw = kps_raw * scale
+
+            for kps in kps_raw:
+                indexes = np.arange(0, len(kps), 3)
+                temp_kps = []
+                for index in indexes:
+                    temp_kps.append([kps[index], kps[index + 1]])
+                kps_list.append(np.array(temp_kps))
+            score_list = score_raw.ravel().tolist()
+
+        result_boxes = cv2.dnn.NMSBoxes(bbox_list, score_list, 0.3, 0.45, 0.5)
+        # print(result_boxes)  # 检查 result_boxes
+
+        if result_boxes and (len(result_boxes) > 0 or isinstance(result_boxes, np.ndarray)):
+            result = []
+            for r in result_boxes:  # 确保索引在 result_boxes 的范围内
+                if r == max_num:
+                    break
+                result.append(kps_list[r])
+
+            # 缩放 bbox_list 后，需要将其中的元素转换为单个数字
+            bbox_list = [bbox * scale for bbox in bbox_list]  # 缩放所有 bbox_list 元素
+            bbox_list = [[int(item) for item in sublist] for sublist in bbox_list]
+
+            # 检查 bbox_list 是否为空
+            if bbox_list:
+                # 使用缩放后的 bbox_list 进行后续操作
+                x1 = bbox_list[0][0]  # 使用索引访问单个元素
+                y1 = bbox_list[0][1]
+                x2 = bbox_list[0][2]
+                y2 = bbox_list[0][3]
+                img = img[:, y1:y2, x1:x2]  # 使用索引访问单个元素并截取图像
+
+                # ... (其他代码)
+
+                img = image_in.detach().clone()
+
+                # 确保访问 bbox_list 的元素时，使用索引访问子列表中的单个元素
+                img = img[:, int(bbox_list[0][1]):int(bbox_list[0][3]),
+                      int(bbox_list[0][0]):int(bbox_list[0][2])]
+
+                # ... (其他代码)
+
+                height = img.size(dim=1)
+                width = img.size(dim=2)
+                length = max((height, width))
+
+                image = torch.zeros((length, length, 3), dtype=torch.uint8, device='cuda')
+                img = img.permute(1, 2, 0)
+
+                image[0:height, 0:width] = img
+                scale = length / 192
+                image = torch.div(image, 255.0)
+
+                t192 = v2.Resize((192, 192), antialias=False)
+                image = image.permute(2, 0, 1)
+                image = t192(image)
+
+                test = image_in.detach().clone().permute(1, 2, 0)
+                test = test.cpu().numpy()
+
+                input_mean = 0.0
+                input_std = 1.0
+
+                self.lmk_dim = 2
+                self.lmk_num = 106
+
+                bbox = bbox_list[0]
+                w, h = (bbox_list[0][2] - bbox_list[0][0]), (bbox_list[0][3] - bbox_list[0][1])
+                center = (bbox[2] + bbox[0]) / 2, (bbox[3] + bbox[1]) / 2
+                rotate = 0
+                _scale = 192 / (max(w, h) * 1.5)
+                # print('param:', img.shape, bbox, center, self.input_size, _scale, rotate)
+                aimg, M = self.transform(test, center, 192, _scale, rotate)
+                input_size = tuple(aimg.shape[0:2][::-1])
+                # assert input_size==self.input_size
+                blob = cv2.dnn.blobFromImage(aimg, 1.0 / input_std, input_size,
+                                             (input_mean, input_mean, input_mean),
+                                             swapRB=True)
+                pred = self.insight106_model.run(['fc1'], {'data': blob})[0][0]
+                if pred.shape[0] >= 3000:
+                    pred = pred.reshape((-1, 3))
+                else:
+                    pred = pred.reshape((-1, 2))
+                if self.lmk_num < pred.shape[0]:
+                    pred = pred[self.lmk_num * -1:, :]
+                pred[:, 0:2] += 1
+                pred[:, 0:2] *= 96
+                if pred.shape[1] == 3:
+                    pred[:, 2] *= (106)
+
+                IM = cv2.invertAffineTransform(M)
+                pred = self.trans_points2d(pred, IM)
+                # face[self.taskname] = pred
+                # if self.require_pose:
+                #     P = transform.estimate_affine_matrix_3d23d(self.mean_lmk, pred)
+                #     s, R, t = transform.P2sRt(P)
+                #     rx, ry, rz = transform.matrix2angle(R)
+                #     pose = np.array([rx, ry, rz], dtype=np.float32)
+                #     face['pose'] = pose  # pitch, yaw, roll
+                # print(pred.shape)
+                # print(pred)
+
+                for point in pred:
+                    # 检查关键点坐标是否在图像范围内
+                    if 0 <= int(point[1]) < test.shape[0] and 0 <= int(point[0]) < test.shape[1]:
+                        test[int(point[1])][int(point[0])][0] = 255
+                        test[int(point[1])][int(point[0])][1] = 255
+                        test[int(point[1])][int(point[0])][2] = 255
+                # cv2.imwrite('2.jpg', test)
+
+                predd = []
+                predd.append(pred[38])
+                predd.append(pred[88])
+                # predd.append(pred[86])
+                # predd.append(pred[52])
+                # predd.append(pred[61])
+
+                predd.append(kps_list[0][2])
+                predd.append(kps_list[0][3])
+                predd.append(kps_list[0][4])
+
+                # for point in predd:
+                #     test[int(point[1])] [int(point[0])] [0] = 255
+                #     test[int(point[1])] [int(point[0])] [1] = 255
+                #     test[int(point[1])] [int(point[0])] [2] = 255
+                # cv2.imwrite('2.jpg', test)
+                preddd = []
+                preddd.append(predd)
+
+                return np.array(preddd)  # 返回计算结果
+
+            # 如果 bbox_list 为空，返回一个空数组
+            else:
+                return np.array([])  # 返回空数组
+
+        # 如果 result_boxes 为空，返回一个空数组
+        else:
+            return np.array([])  # 返回空数组
+
+
 
     def transform(self, data, center, output_size, scale, rotation):
         scale_ratio = scale
@@ -1310,22 +1493,22 @@ class Models():
         priors = torch.tensor(self.anchors).view(-1, 4)
         priors = priors.to('cuda')
 
-        # pre = landmarks.squeeze(0) 
+        # pre = landmarks.squeeze(0)
         pre = torch.squeeze(landmarks, 0)
-        
+
         tmp = (priors[:, :2] + pre[:, :2] * 0.1 * priors[:, 2:], priors[:, :2] + pre[:, 2:4] * 0.1 * priors[:, 2:], priors[:, :2] + pre[:, 4:6] * 0.1 * priors[:, 2:], priors[:, :2] + pre[:, 6:8] * 0.1 * priors[:, 2:], priors[:, :2] + pre[:, 8:10] * 0.1 * priors[:, 2:])
         landmarks = torch.cat(tmp, dim=1)
         # landmarks = landmarks * scale1
         landmarks = torch.mul(landmarks, scale1)
 
-        landmarks = landmarks.cpu().numpy()  
+        landmarks = landmarks.cpu().numpy()
 
         # ignore low scores
         inds = torch.where(scores>score)[0]
-        inds = inds.cpu().numpy()  
-        scores = scores.cpu().numpy()  
-        
-        landmarks, scores = landmarks[inds], scores[inds]    
+        inds = inds.cpu().numpy()
+        scores = scores.cpu().numpy()
+
+        landmarks, scores = landmarks[inds], scores[inds]
 
         # sort
         order = scores.argsort()[::-1]

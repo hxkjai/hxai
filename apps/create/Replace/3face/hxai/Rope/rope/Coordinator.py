@@ -39,6 +39,7 @@ def coordinator():
     if len(action) > 0:
 
         if action[0][0] == "load_target_video":
+            vm.stop_camera_video()
             vm.load_target_video(action[0][1])
             action.pop(0)
         elif action[0][0] == "rotate_image":
@@ -64,6 +65,7 @@ def coordinator():
 
 
         elif action[0][0] == "load_target_image":
+            vm.stop_camera_video()
             vm.load_target_image(action[0][1])
             action.pop(0)
         elif action[0][0] == "play_video":
@@ -140,6 +142,15 @@ def coordinator():
         elif action[0][0] == "load_camera":
             vm.load_camera(action[0][1])
             action.pop(0)
+        elif action[0][0] == "start_virtual_camera":
+            print("start")
+            vm.start_virtual_camera()
+            action.pop(0)
+        elif action[0][0] == "stop_virtual_camera":
+            vm.stop_virtual_camera()
+            action.pop(0)
+
+
 
         else:
             print("Action not found: "+action[0][0]+" "+str(action[0][1]))
@@ -184,13 +195,16 @@ def load_clip_model():
 def run():
     global gui, vm, action, frame, r_frame, resize_delay, mem_delay
 
-    models = Models.Models()
+    models = Models.Models()  # 创建模型对象
     gui = GUI.GUI(models)
     vm = VM.VideoManager(models)
 
     def on_closing():
+        global coordinator  # 将 coordinator 声明为全局变量
         gui.destroy()
         vm.stop_camera_video()
+        # 停止 coordinator 函数的执行
+        gui.after_cancel(coordinator)
 
     gui.protocol("WM_DELETE_WINDOW", on_closing)
 
@@ -199,7 +213,12 @@ def run():
     r_frame = []
 
     gui.initialize_gui()
+    coordinator()  # 启动 coordinator 函数
 
-    coordinator()
+    gui.mainloop()  # 运行 GUI 事件循环
 
-    gui.mainloop()
+    # 释放模型资源
+    models.delete_models()  # 在 GUI 事件循环结束后释放模型对象
+
+if __name__ == "__main__":
+    run()

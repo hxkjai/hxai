@@ -9,7 +9,7 @@
             "cpu"
         ],
         "icon": "ai工具集",
-        "id": 123,
+        "id": 128,
         "kind": "学习网",
         "kind_en": "StudyWeb",
         "line_type": "在线",
@@ -31,7 +31,7 @@
             "cpu"
         ],
         "icon": "c站",
-        "id": 122,
+        "id": 127,
         "kind": "学习网",
         "kind_en": "StudyWeb",
         "line_type": "在线",
@@ -53,7 +53,7 @@
             "cpu"
         ],
         "icon": "B站",
-        "id": 121,
+        "id": 126,
         "kind": "学习网",
         "kind_en": "StudyWeb",
         "line_type": "在线",
@@ -75,7 +75,7 @@
             "cpu"
         ],
         "icon": "抖音",
-        "id": 120,
+        "id": 125,
         "kind": "学习网",
         "kind_en": "StudyWeb",
         "line_type": "在线",
@@ -97,7 +97,7 @@
             "cpu"
         ],
         "icon": "三合一换脸",
-        "id": 119,
+        "id": 124,
         "kind": "学习网",
         "kind_en": "StudyWeb",
         "line_type": "在线",
@@ -119,7 +119,7 @@
             "cpu"
         ],
         "icon": "win激活",
-        "id": 118,
+        "id": 123,
         "kind": "激活",
         "kind_en": "Activate",
         "line_type": "本地",
@@ -141,7 +141,7 @@
             "cpu"
         ],
         "icon": "快速搜索",
-        "id": 117,
+        "id": 122,
         "kind": "搜索工具",
         "kind_en": "SearchTool",
         "line_type": "本地",
@@ -163,7 +163,7 @@
             "cpu"
         ],
         "icon": "文本搜索",
-        "id": 116,
+        "id": 121,
         "kind": "搜索工具",
         "kind_en": "SearchTool",
         "line_type": "本地",
@@ -185,7 +185,7 @@
             "cpu"
         ],
         "icon": "闪电搜索",
-        "id": 115,
+        "id": 120,
         "kind": "搜索工具",
         "kind_en": "SearchTool",
         "line_type": "本地",
@@ -207,7 +207,7 @@
             "cpu"
         ],
         "icon": "Everything",
-        "id": 114,
+        "id": 119,
         "kind": "搜索工具",
         "kind_en": "SearchTool",
         "line_type": "本地",
@@ -229,7 +229,7 @@
             "cpu"
         ],
         "icon": "在线下载",
-        "id": 113,
+        "id": 118,
         "kind": "下载工具",
         "kind_en": "DownloadProgram",
         "line_type": "在线",
@@ -251,7 +251,7 @@
             "cpu"
         ],
         "icon": "CRTubeGet",
-        "id": 112,
+        "id": 117,
         "kind": "下载工具",
         "kind_en": "DownloadProgram",
         "line_type": "本地",
@@ -273,7 +273,7 @@
             "cpu"
         ],
         "icon": "b站下载2",
-        "id": 111,
+        "id": 116,
         "kind": "下载工具",
         "kind_en": "DownloadProgram",
         "line_type": "本地",
@@ -295,7 +295,7 @@
             "cpu"
         ],
         "icon": "b站下载1",
-        "id": 110,
+        "id": 115,
         "kind": "下载工具",
         "kind_en": "DownloadProgram",
         "line_type": "本地",
@@ -317,7 +317,7 @@
             "cpu"
         ],
         "icon": "TreeSize",
-        "id": 109,
+        "id": 114,
         "kind": "电脑清理",
         "kind_en": "ComputerCleaning",
         "line_type": "本地",
@@ -339,7 +339,7 @@
             "cpu"
         ],
         "icon": "SpaceSniffer",
-        "id": 108,
+        "id": 113,
         "kind": "电脑清理",
         "kind_en": "ComputerCleaning",
         "line_type": "本地",
@@ -361,7 +361,7 @@
             "cpu"
         ],
         "icon": "dism",
-        "id": 107,
+        "id": 112,
         "kind": "电脑清理",
         "kind_en": "ComputerCleaning",
         "line_type": "本地",
@@ -383,7 +383,7 @@
             "cpu"
         ],
         "icon": "dism",
-        "id": 106,
+        "id": 111,
         "kind": "电脑清理",
         "kind_en": "ComputerCleaning",
         "line_type": "本地",
@@ -405,7 +405,7 @@
             "cpu"
         ],
         "icon": "科学上网",
-        "id": 105,
+        "id": 110,
         "kind": "科学上网",
         "kind_en": "VPN",
         "line_type": "本地",
@@ -427,7 +427,7 @@
             "cpu"
         ],
         "icon": "图吧工具箱",
-        "id": 104,
+        "id": 109,
         "kind": "电脑性能检测",
         "kind_en": "ComputerPerformanceTest",
         "line_type": "本地",
@@ -449,7 +449,7 @@
             "cpu"
         ],
         "icon": "Photomatix",
-        "id": 103,
+        "id": 108,
         "kind": "其他软件",
         "kind_en": "other",
         "line_type": "本地",
@@ -471,7 +471,7 @@
             "cpu"
         ],
         "icon": "ptgui",
-        "id": 102,
+        "id": 107,
         "kind": "其他软件",
         "kind_en": "other",
         "line_type": "本地",
@@ -493,7 +493,7 @@
             "cpu"
         ],
         "icon": "bandicom",
-        "id": 101,
+        "id": 106,
         "kind": "屏幕录制",
         "kind_en": "ScreenRecording",
         "line_type": "本地",
@@ -515,7 +515,7 @@
             "cpu"
         ],
         "icon": "obs",
-        "id": 100,
+        "id": 105,
         "kind": "屏幕录制",
         "kind_en": "ScreenRecording",
         "line_type": "本地",
@@ -537,7 +537,7 @@
             "cpu"
         ],
         "icon": "漫画解说",
-        "id": 99,
+        "id": 104,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -559,7 +559,7 @@
             "cpu"
         ],
         "icon": "灵狐自动剪辑",
-        "id": 98,
+        "id": 103,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -581,7 +581,7 @@
             "cpu"
         ],
         "icon": "CapCut",
-        "id": 97,
+        "id": 102,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -603,7 +603,7 @@
             "cpu"
         ],
         "icon": "After Effects",
-        "id": 96,
+        "id": 101,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -625,7 +625,7 @@
             "cpu"
         ],
         "icon": "Premiere",
-        "id": 95,
+        "id": 100,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -647,7 +647,7 @@
             "cpu"
         ],
         "icon": "达芬奇",
-        "id": 94,
+        "id": 99,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -669,7 +669,7 @@
             "cpu"
         ],
         "icon": "slicer",
-        "id": 93,
+        "id": 98,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -691,7 +691,7 @@
             "cpu"
         ],
         "icon": "uvr5",
-        "id": 92,
+        "id": 97,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -713,7 +713,7 @@
             "cpu"
         ],
         "icon": "CorelDRAW",
-        "id": 91,
+        "id": 96,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -735,7 +735,7 @@
             "cpu"
         ],
         "icon": "llustrator",
-        "id": 90,
+        "id": 95,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -757,7 +757,7 @@
             "cpu"
         ],
         "icon": "krita",
-        "id": 89,
+        "id": 94,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -779,7 +779,7 @@
             "cpu"
         ],
         "icon": "ebsynth",
-        "id": 88,
+        "id": 93,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -801,7 +801,7 @@
             "cpu"
         ],
         "icon": "Photoshop",
-        "id": 87,
+        "id": 92,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -823,7 +823,7 @@
             "cpu"
         ],
         "icon": "VB-AUDIO",
-        "id": 86,
+        "id": 91,
         "kind": "音频机架",
         "kind_en": "AudioRack",
         "line_type": "本地",
@@ -845,7 +845,7 @@
             "cpu"
         ],
         "icon": "ASIO驱动跳线",
-        "id": 85,
+        "id": 90,
         "kind": "音频机架",
         "kind_en": "AudioRack",
         "line_type": "本地",
@@ -867,7 +867,7 @@
             "cpu"
         ],
         "icon": "Studio One",
-        "id": 84,
+        "id": 89,
         "kind": "音频机架",
         "kind_en": "AudioRack",
         "line_type": "本地",
@@ -889,7 +889,7 @@
             "cpu"
         ],
         "icon": "Monster",
-        "id": 83,
+        "id": 88,
         "kind": "音频机架",
         "kind_en": "AudioRack",
         "line_type": "本地",
@@ -911,7 +911,7 @@
             "cpu"
         ],
         "icon": "WeCam",
-        "id": 82,
+        "id": 87,
         "kind": "直播软件",
         "kind_en": "LiveSoftware",
         "line_type": "本地",
@@ -933,7 +933,7 @@
             "cpu"
         ],
         "icon": "游戏采集",
-        "id": 81,
+        "id": 86,
         "kind": "直播软件",
         "kind_en": "LiveSoftware",
         "line_type": "本地",
@@ -955,7 +955,7 @@
             "cpu"
         ],
         "icon": "steam",
-        "id": 80,
+        "id": 85,
         "kind": "直播软件",
         "kind_en": "LiveSoftware",
         "line_type": "本地",
@@ -977,7 +977,7 @@
             "cpu"
         ],
         "icon": "obs",
-        "id": 79,
+        "id": 84,
         "kind": "直播软件",
         "kind_en": "LiveSoftware",
         "line_type": "本地",
@@ -999,7 +999,7 @@
             "cpu"
         ],
         "icon": "咩播",
-        "id": 78,
+        "id": 83,
         "kind": "直播软件",
         "kind_en": "LiveSoftware",
         "line_type": "本地",
@@ -1021,7 +1021,7 @@
             "cpu"
         ],
         "icon": "manycam",
-        "id": 77,
+        "id": 82,
         "kind": "直播软件",
         "kind_en": "LiveSoftware",
         "line_type": "本地",
@@ -1043,7 +1043,7 @@
             "cpu"
         ],
         "icon": "快手直播伴侣",
-        "id": 76,
+        "id": 81,
         "kind": "直播软件",
         "kind_en": "LiveSoftware",
         "line_type": "本地",
@@ -1065,7 +1065,7 @@
             "cpu"
         ],
         "icon": "抖音直播伴侣",
-        "id": 75,
+        "id": 80,
         "kind": "直播软件",
         "kind_en": "LiveSoftware",
         "line_type": "本地",
@@ -1087,7 +1087,7 @@
             "cpu"
         ],
         "icon": "iVCam",
-        "id": 74,
+        "id": 79,
         "kind": "直播软件",
         "kind_en": "LiveSoftware",
         "line_type": "本地",
@@ -1108,7 +1108,7 @@
             "cpu"
         ],
         "icon": "DeepFace",
-        "id": 73,
+        "id": 78,
         "kind": "直播",
         "kind_en": "Live",
         "line_type": "本地",
@@ -1128,7 +1128,7 @@
             "n卡gpu"
         ],
         "icon": "赛博丹炉",
-        "id": 72,
+        "id": 77,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -1148,7 +1148,7 @@
             "n卡gpu"
         ],
         "icon": "so-vits-svc",
-        "id": 71,
+        "id": 76,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -1169,7 +1169,7 @@
             "cpu"
         ],
         "icon": "rvc",
-        "id": 70,
+        "id": 75,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -1190,7 +1190,7 @@
             "cpu"
         ],
         "icon": "rvc",
-        "id": 69,
+        "id": 74,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -1212,7 +1212,7 @@
             "cpu"
         ],
         "icon": "gpt-sovits",
-        "id": 68,
+        "id": 73,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -1234,7 +1234,7 @@
             "cpu"
         ],
         "icon": "ppt",
-        "id": 67,
+        "id": 72,
         "kind": "办公",
         "kind_en": "work",
         "line_type": "在线",
@@ -1256,7 +1256,7 @@
             "cpu"
         ],
         "icon": "gamma",
-        "id": 66,
+        "id": 71,
         "kind": "办公",
         "kind_en": "work",
         "line_type": "在线",
@@ -1278,7 +1278,7 @@
             "cpu"
         ],
         "icon": "亿图脑图",
-        "id": 65,
+        "id": 70,
         "kind": "办公",
         "kind_en": "work",
         "line_type": "本地",
@@ -1300,7 +1300,7 @@
             "cpu"
         ],
         "icon": "CodeGeeX",
-        "id": 64,
+        "id": 69,
         "kind": "编程",
         "kind_en": "program",
         "line_type": "在线",
@@ -1322,7 +1322,7 @@
             "cpu"
         ],
         "icon": "CodeWhisperer",
-        "id": 63,
+        "id": 68,
         "kind": "编程",
         "kind_en": "program",
         "line_type": "在线",
@@ -1344,7 +1344,7 @@
             "cpu"
         ],
         "icon": "DevChat",
-        "id": 62,
+        "id": 67,
         "kind": "编程",
         "kind_en": "program",
         "line_type": "在线",
@@ -1366,7 +1366,7 @@
             "cpu"
         ],
         "icon": "github",
-        "id": 61,
+        "id": 66,
         "kind": "编程",
         "kind_en": "program",
         "line_type": "在线",
@@ -1388,7 +1388,7 @@
             "cpu"
         ],
         "icon": "通义千问",
-        "id": 60,
+        "id": 65,
         "kind": "编程",
         "kind_en": "program",
         "line_type": "在线",
@@ -1410,7 +1410,7 @@
             "cpu"
         ],
         "icon": "讯飞星火",
-        "id": 59,
+        "id": 64,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "在线",
@@ -1432,7 +1432,7 @@
             "cpu"
         ],
         "icon": "GPT4All",
-        "id": 58,
+        "id": 63,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "本地",
@@ -1454,7 +1454,7 @@
             "cpu"
         ],
         "icon": "LMstudio",
-        "id": 57,
+        "id": 62,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "本地",
@@ -1476,7 +1476,7 @@
             "cpu"
         ],
         "icon": "claude",
-        "id": 56,
+        "id": 61,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "在线",
@@ -1498,7 +1498,7 @@
             "cpu"
         ],
         "icon": "通义千问",
-        "id": 55,
+        "id": 60,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "在线",
@@ -1520,7 +1520,7 @@
             "cpu"
         ],
         "icon": "豆包",
-        "id": 54,
+        "id": 59,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "在线",
@@ -1542,7 +1542,7 @@
             "cpu"
         ],
         "icon": "copilot",
-        "id": 53,
+        "id": 58,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "在线",
@@ -1564,7 +1564,7 @@
             "cpu"
         ],
         "icon": "文心一言",
-        "id": 52,
+        "id": 57,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "在线",
@@ -1586,7 +1586,7 @@
             "cpu"
         ],
         "icon": "openai",
-        "id": 51,
+        "id": 56,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "在线",
@@ -1608,7 +1608,7 @@
             "cpu"
         ],
         "icon": "Gemini1.5",
-        "id": 50,
+        "id": 55,
         "kind": "对话",
         "kind_en": "chat",
         "line_type": "在线",
@@ -1630,7 +1630,7 @@
             "cpu"
         ],
         "icon": "IDMVTON",
-        "id": 49,
+        "id": 54,
         "kind": "换像",
         "kind_en": "ImageTransformation",
         "line_type": "在线",
@@ -1652,7 +1652,7 @@
             "cpu"
         ],
         "icon": "swapface",
-        "id": 48,
+        "id": 53,
         "kind": "换像",
         "kind_en": "ImageTransformation",
         "line_type": "本地",
@@ -1674,7 +1674,7 @@
             "cpu"
         ],
         "icon": "DeepFace",
-        "id": 47,
+        "id": 52,
         "kind": "换像",
         "kind_en": "ImageTransformation",
         "line_type": "本地",
@@ -1695,7 +1695,7 @@
             "cpu"
         ],
         "icon": "DeepFace",
-        "id": 46,
+        "id": 51,
         "kind": "换像",
         "kind_en": "ImageTransformation",
         "line_type": "本地",
@@ -1716,7 +1716,7 @@
             "cpu"
         ],
         "icon": "IDMVTON",
-        "id": 45,
+        "id": 50,
         "kind": "换像",
         "kind_en": "ImageTransformation",
         "line_type": "本地",
@@ -1737,7 +1737,7 @@
             "cpu"
         ],
         "icon": "三合一换脸",
-        "id": 44,
+        "id": 49,
         "kind": "换像",
         "kind_en": "ImageTransformation",
         "line_type": "本地",
@@ -1747,7 +1747,7 @@
         "path": "face.exe",
         "pay_or_not": 1,
         "unzip_path": "\\apps\\create\\Replace",
-        "tag": "三合一2.8.0自动更新,rope里面有一个检测模型右键查看下载，更新遮罩，摄像头分辨，检测模型"
+        "tag": "三合一2.8.2手动打开目录里面的依赖把它运行一下，添加摄像头依赖，rope更新虚拟摄像头，修复部分问题，详情看教程"
     },
     {
         "app_id": 1633.0,
@@ -1758,7 +1758,7 @@
             "cpu"
         ],
         "icon": "LivePortrait",
-        "id": 124,
+        "id": 48,
         "kind": "换像",
         "kind_en": "ImageTransformation",
         "line_type": "本地",
@@ -1780,7 +1780,7 @@
             "cpu"
         ],
         "icon": "pika",
-        "id": 43,
+        "id": 47,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "在线",
@@ -1802,7 +1802,7 @@
             "cpu"
         ],
         "icon": "runway",
-        "id": 42,
+        "id": 46,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "在线",
@@ -1824,7 +1824,7 @@
             "cpu"
         ],
         "icon": "sora",
-        "id": 41,
+        "id": 45,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "在线",
@@ -1846,7 +1846,7 @@
             "cpu"
         ],
         "icon": "Stable Video",
-        "id": 40,
+        "id": 44,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "在线",
@@ -1868,7 +1868,7 @@
             "cpu"
         ],
         "icon": "d-di",
-        "id": 39,
+        "id": 43,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "在线",
@@ -1890,7 +1890,7 @@
             "cpu"
         ],
         "icon": "腾讯智影",
-        "id": 38,
+        "id": 42,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "在线",
@@ -1903,6 +1903,50 @@
         "tag": 1
     },
     {
+        "app_id": null,
+        "desc": "视频生成动画每天有免费的积分生成",
+        "doc_url": null,
+        "gpu_type": [
+            "n卡gpu",
+            "a卡gpu",
+            "cpu"
+        ],
+        "icon": "luma",
+        "id": 41,
+        "kind": "视频",
+        "kind_en": "Video",
+        "line_type": "在线",
+        "menu": "AI创作",
+        "menu_en": "AICreation",
+        "name": "luma",
+        "path": "luma.bat",
+        "pay_or_not": 0,
+        "unzip_path": null,
+        "tag": null
+    },
+    {
+        "app_id": null,
+        "desc": "快手的ai现在需邀请才可以使用",
+        "doc_url": null,
+        "gpu_type": [
+            "n卡gpu",
+            "a卡gpu",
+            "cpu"
+        ],
+        "icon": "可灵",
+        "id": 40,
+        "kind": "视频",
+        "kind_en": "Video",
+        "line_type": "在线",
+        "menu": "AI创作",
+        "menu_en": "AICreation",
+        "name": "可灵",
+        "path": "可灵.bat",
+        "pay_or_not": 0,
+        "unzip_path": null,
+        "tag": null
+    },
+    {
         "app_id": 871.0,
         "desc": "支持视频高清修复，视频升格，加帧，比如360分辨可以修复成高清4k",
         "doc_url": "https://ai.huanxian.art:33/archives/871",
@@ -1912,7 +1956,7 @@
             "cpu"
         ],
         "icon": "Topaz",
-        "id": 37,
+        "id": 39,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -1933,7 +1977,7 @@
             "cpu"
         ],
         "icon": "amdsdwebui",
-        "id": 36,
+        "id": 38,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -1954,7 +1998,7 @@
             "cpu"
         ],
         "icon": "sdwebui",
-        "id": 35,
+        "id": 37,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -1976,7 +2020,7 @@
             "cpu"
         ],
         "icon": "SadTalker",
-        "id": 34,
+        "id": 36,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -1997,7 +2041,7 @@
             "cpu"
         ],
         "icon": "sdwebui",
-        "id": 33,
+        "id": 35,
         "kind": "视频",
         "kind_en": "Video",
         "line_type": "本地",
@@ -2019,7 +2063,7 @@
             "cpu"
         ],
         "icon": "GFPGAN",
-        "id": 32,
+        "id": 34,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "在线",
@@ -2041,7 +2085,7 @@
             "cpu"
         ],
         "icon": "CodeFormer",
-        "id": 31,
+        "id": 33,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "在线",
@@ -2063,7 +2107,7 @@
             "cpu"
         ],
         "icon": "clipdrop",
-        "id": 30,
+        "id": 32,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "在线",
@@ -2085,7 +2129,7 @@
             "cpu"
         ],
         "icon": "ARC",
-        "id": 29,
+        "id": 31,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "在线",
@@ -2107,7 +2151,7 @@
             "cpu"
         ],
         "icon": "通义千问",
-        "id": 28,
+        "id": 30,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "在线",
@@ -2129,7 +2173,7 @@
             "cpu"
         ],
         "icon": "抖音图像",
-        "id": 27,
+        "id": 29,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "在线",
@@ -2151,7 +2195,7 @@
             "cpu"
         ],
         "icon": "Midjourney",
-        "id": 26,
+        "id": 28,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "在线",
@@ -2173,7 +2217,7 @@
             "cpu"
         ],
         "icon": "去水印1",
-        "id": 25,
+        "id": 27,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "在线",
@@ -2194,7 +2238,7 @@
             "cpu"
         ],
         "icon": "CodeFormer",
-        "id": 24,
+        "id": 26,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -2216,7 +2260,7 @@
             "cpu"
         ],
         "icon": "topaz",
-        "id": 23,
+        "id": 25,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -2237,7 +2281,7 @@
             "cpu"
         ],
         "icon": "amdsdwebui",
-        "id": 22,
+        "id": 24,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -2258,7 +2302,7 @@
             "cpu"
         ],
         "icon": "sdwebui",
-        "id": 21,
+        "id": 23,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -2279,7 +2323,7 @@
             "cpu"
         ],
         "icon": "sdwebui",
-        "id": 20,
+        "id": 22,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -2300,7 +2344,7 @@
             "cpu"
         ],
         "icon": "readmeov",
-        "id": 19,
+        "id": 21,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -2321,7 +2365,7 @@
             "cpu"
         ],
         "icon": "ProPainter",
-        "id": 18,
+        "id": 20,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -2342,7 +2386,7 @@
             "cpu"
         ],
         "icon": "RemoveWatermark",
-        "id": 17,
+        "id": 19,
         "kind": "图像",
         "kind_en": "Image",
         "line_type": "本地",
@@ -2364,7 +2408,7 @@
             "cpu"
         ],
         "icon": "sp文转音",
-        "id": 16,
+        "id": 18,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2386,7 +2430,7 @@
             "cpu"
         ],
         "icon": "maker文转音",
-        "id": 15,
+        "id": 17,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2408,7 +2452,7 @@
             "cpu"
         ],
         "icon": "微软文转音",
-        "id": 14,
+        "id": 16,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2430,7 +2474,7 @@
             "cpu"
         ],
         "icon": "阿里配音",
-        "id": 13,
+        "id": 15,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2452,7 +2496,7 @@
             "cpu"
         ],
         "icon": "stable audio",
-        "id": 12,
+        "id": 14,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2474,7 +2518,7 @@
             "cpu"
         ],
         "icon": "网易天音",
-        "id": 11,
+        "id": 13,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2496,7 +2540,7 @@
             "cpu"
         ],
         "icon": "Suno",
-        "id": 10,
+        "id": 12,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2518,7 +2562,7 @@
             "cpu"
         ],
         "icon": "Udio",
-        "id": 9,
+        "id": 11,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2540,7 +2584,7 @@
             "cpu"
         ],
         "icon": "MusicFX",
-        "id": 8,
+        "id": 10,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2562,7 +2606,7 @@
             "cpu"
         ],
         "icon": "通义千问",
-        "id": 7,
+        "id": 9,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "在线",
@@ -2575,6 +2619,28 @@
         "tag": 1
     },
     {
+        "app_id": 1651.0,
+        "desc": "文本转语音任意声音10秒即可模仿",
+        "doc_url": "https://ai.huanxian.art:33/archives/1651",
+        "gpu_type": [
+            "n卡gpu",
+            "a卡gpu",
+            "cpu"
+        ],
+        "icon": "fishspeech",
+        "id": 8,
+        "kind": "音频",
+        "kind_en": "Audio",
+        "line_type": "在线",
+        "menu": "AI创作",
+        "menu_en": "AICreation",
+        "name": "fishaudio",
+        "path": "fishaudio.bat",
+        "pay_or_not": 0,
+        "unzip_path": null,
+        "tag": null
+    },
+    {
         "app_id": 1307.0,
         "desc": "ai创作任意你想要的，音频素材，本地无线生成",
         "doc_url": "https://ai.huanxian.art:33/archives/1307",
@@ -2583,7 +2649,7 @@
             "cpu"
         ],
         "icon": "AudioCraft",
-        "id": 6,
+        "id": 7,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -2603,7 +2669,7 @@
             "n卡gpu"
         ],
         "icon": "so-vits-svc",
-        "id": 5,
+        "id": 6,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -2623,7 +2689,7 @@
             "a卡gpu"
         ],
         "icon": "rvc",
-        "id": 4,
+        "id": 5,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -2645,7 +2711,7 @@
             "cpu"
         ],
         "icon": "rvc",
-        "id": 3,
+        "id": 4,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -2665,7 +2731,7 @@
             "n卡gpu"
         ],
         "icon": "gpt-sovits",
-        "id": 2,
+        "id": 3,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -2686,7 +2752,7 @@
             "cpu"
         ],
         "icon": "chattts",
-        "id": 1,
+        "id": 2,
         "kind": "音频",
         "kind_en": "Audio",
         "line_type": "本地",
@@ -2697,5 +2763,47 @@
         "pay_or_not": 1,
         "unzip_path": "\\apps\\create\\Audio\\1",
         "tag": "tts更新了界面此次更新需要重新下载新的资源包，重新再次解压到目录"
+    },
+    {
+        "app_id": 1651.0,
+        "desc": "文本转语音任意声音10秒即可模仿",
+        "doc_url": "https://ai.huanxian.art:33/archives/1651",
+        "gpu_type": [
+            "n卡gpu",
+            "cpu"
+        ],
+        "icon": "fishspeech",
+        "id": 1,
+        "kind": "音频",
+        "kind_en": "Audio",
+        "line_type": "本地",
+        "menu": "AI创作",
+        "menu_en": "AICreation",
+        "name": "fishspeech",
+        "path": "fishspeech.bat",
+        "pay_or_not": 1,
+        "unzip_path": "\\apps\\create\\Audio\\1",
+        "tag": null
+    },
+    {
+        "app_id": 1670.0,
+        "desc": "阿里文本转语音任意声音3秒即可模仿",
+        "doc_url": "https://ai.huanxian.art:33/archives/1670",
+        "gpu_type": [
+            "n卡gpu",
+            "cpu"
+        ],
+        "icon": "CosyVoice",
+        "id": 129,
+        "kind": "音频",
+        "kind_en": "Audio",
+        "line_type": "本地",
+        "menu": "AI创作",
+        "menu_en": "AICreation",
+        "name": "CosyVoice",
+        "path": "CosyVoice.exe",
+        "pay_or_not": 1,
+        "unzip_path": "\\apps\\create\\Audio\\1",
+        "tag": null
     }
 ]
