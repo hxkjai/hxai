@@ -1747,7 +1747,7 @@
         "path": "face.exe",
         "pay_or_not": 1,
         "unzip_path": "\\apps\\create\\Replace",
-        "tag": "三合一2.8.2手动打开目录里面的依赖把它运行一下，添加摄像头依赖，rope更新虚拟摄像头，修复部分问题，详情看教程"
+        "tag": "三合一7.21日 修复了bug  还需要手动打开目录里面的（依赖.bat）双击运行一下"
     },
     {
         "app_id": 1633.0,
@@ -2801,7 +2801,7 @@
         "menu": "AI创作",
         "menu_en": "AICreation",
         "name": "CosyVoice",
-        "path": "CosyVoice.exe",
+        "path": "cosyvoice.exe",
         "pay_or_not": 1,
         "unzip_path": "\\apps\\create\\Audio\\1",
         "tag": null
