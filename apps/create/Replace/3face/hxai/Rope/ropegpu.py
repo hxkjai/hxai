@@ -22,7 +22,9 @@ def main():
 	rename_and_copy_file(".\\rope", ".\\rope", "0GUI.pyd")
 	# 修改并复制 clip.py 文件
 
-	# rename_and_copy_file(".\\rope\\external\\cliplib", ".\\rope\\external\\cliplib", "0clip.py")
+	rename_and_copy_file(".\\rope", ".\\rope", "0Dicts.py")
+
+	rename_and_copy_file(".\\rope", ".\\rope", "0Coordinator.py")
 
 
 if __name__ == "__main__":

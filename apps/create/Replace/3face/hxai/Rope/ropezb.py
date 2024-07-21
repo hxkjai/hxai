@@ -20,10 +20,9 @@ def main():
 
     # 修改并复制 clip.py 文件
     rename_and_copy_file(".\\rope", ".\\rope", "2GUI.pyd")
+    rename_and_copy_file(".\\rope", ".\\rope", "2Dicts.py")
     # 修改并复制 clip.py 文件
-
-    # rename_and_copy_file(".\\rope\\external\\cliplib", ".\\rope\\external\\cliplib", "2clip.py")
-
+    rename_and_copy_file(".\\rope", ".\\rope", "2Coordinator.py")
 
 if __name__ == "__main__":
     main()

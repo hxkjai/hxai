@@ -21,9 +21,9 @@ def main():
 	# 修改并复制 clip.py 文件
 	rename_and_copy_file(".\\rope", ".\\rope", "1GUI.pyd")
 	# 修改并复制 clip.py 文件
-	# rename_and_copy_file(".\\rope\\external\\cliplib", ".\\rope\\external\\cliplib", "1clip.py")
-
-
+	rename_and_copy_file(".\\rope", ".\\rope", "1Dicts.py")
+# 修改并复制 clip.py 文件
+	rename_and_copy_file(".\\rope", ".\\rope", "1Coordinator.py")
 
 
 
