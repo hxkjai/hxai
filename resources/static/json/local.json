@@ -1747,7 +1747,7 @@
         "path": "face.exe",
         "pay_or_not": 1,
         "unzip_path": "\\apps\\create\\Replace",
-        "tag": "三合一7.21日 修复了bug  还需要手动打开目录里面的（依赖.bat）双击运行一下"
+        "tag": "三合一2.9.0版本更新 ，需要手动打开目录里面的（依赖.bat）双击运行一下，安装tensorrt，模型右键看教程下载"
     },
     {
         "app_id": 1633.0,
