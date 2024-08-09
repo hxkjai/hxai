@@ -226,6 +226,10 @@ DEFAULT_DATA = {
     'TLRightInfoText': '时间线向右移动:\n将时间线句柄向右移动 30 帧。',
     'TLRightState': False,
 
+    'ExecutionModeTextSelMode': 'CUDA',  # 默认运行模式
+    'ExecutionModeTextSelModes': ['CUDA', 'TensorRT'],  # 可选运行模式
+    'ExecutionModeTextSelInfoText': '运行模式:\n选择使用 CUDA 或 Tensor 运行模型。', #提示
+
     'SaveImageButtonDisplay': 'text',
     'SaveImageButtonInfoText': '保存图像:\n将当前图像保存到您的输出文件夹。',
     'SaveImageButtonState': False,
@@ -409,7 +413,7 @@ DEFAULT_DATA = {
     # 文本选择
     'DetectTypeTextSelInfoText': '面部检测模型:\n选择面部检测模型。大多数情况下只有细微的差别，但在面部处于极端角度或被遮挡时，可能会出现显着差异。',
     'DetectTypeTextSelMode': 'Retinaface',
-    'DetectTypeTextSelModes': ['Retinaface', 'Yolov8', 'SCRDF', 'Yolov10n'],
+    'DetectTypeTextSelModes': ['Retinaface', 'Yolov8', 'SCRDF'],
     'PreviewModeTextSelInfoText': '',
     'PreviewModeTextSelMode': 'Video',
     'PreviewModeTextSelModes': ['Video', 'Image','Theater'],

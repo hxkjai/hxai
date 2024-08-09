@@ -13,7 +13,7 @@ def rename_and_copy_file(src_path, dest_path, filename):
 
 def main():
     # 修改并复制 Coordinator.py 文件
-    rename_and_copy_file(".\\rope", ".\\rope", "2Models.py")
+    rename_and_copy_file(".\\rope", ".\\rope", "2Models.pyd")
 
     # 修改并复制 VideoManager.py 文件
     rename_and_copy_file(".\\rope", ".\\rope", "2VideoManager.pyd")
